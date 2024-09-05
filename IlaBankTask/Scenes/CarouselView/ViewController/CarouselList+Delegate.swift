@@ -89,8 +89,7 @@ extension CarouselListViewController: UICollectionViewDelegate {
         guard let lastVisibleItem = visibleItems.last else { return }
 
         let currentIndexPath = lastVisibleItem.indexPath
-        print("LAST ITEM", currentIndexPath, "POINT", point, "CURRENT INDEX:", viewModel?.viewState.currentIndex ?? 7)
-
+        
         if viewModel?.viewState.currentIndex != currentIndexPath.row && point.y <= 0 {
             // Update the page control in the footer view
             if let financialServices = viewModel?.viewState.financialServices,

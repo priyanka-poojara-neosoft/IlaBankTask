@@ -51,21 +51,18 @@ class CarouselViewModel: CarouselListDelegate {
     
     func seachServices(searchText: String) {
         
-        guard let financialServices = viewState.financialServices else {
+        guard let financialServices = viewState.financialServices,
+              let listData = financialServices[viewState.currentIndex].listData else {
             viewState.serviceDetailList = nil
             return
         }
         
-        // Get the list of service details for the current index
-        if let listData = financialServices[viewState.currentIndex].listData {
-            // Filter the list based on the search text
-            viewState.filteredServiceDetailList = searchText.isEmpty ? listData : listData.filter { service in
-                service.title?.localizedCaseInsensitiveContains(searchText) ?? false
-            }
-        } else {
-            viewState.serviceDetailList = nil
+        viewState.filteredServiceDetailList = searchText.isEmpty ? listData : listData.filter { service in
+            service.title?.localizedStandardContains(searchText) ?? false
         }
-        viewState.serviceDetailList = viewState.filteredServiceDetailList
+        
+        viewState.serviceDetailList = viewState.filteredServiceDetailList?.isEmpty == true ? [ServiceDetail(image: "Empty", title: "Empty", subtitle: "Empty")] : viewState.filteredServiceDetailList
+        
     }
     
     func reloadServices(currentIndex: Int) {

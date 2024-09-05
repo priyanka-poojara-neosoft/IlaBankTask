@@ -24,22 +24,38 @@ extension CarouselListViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.section == 0 {
-            return configureCell(for: collectionView, indexPath: indexPath, cellType: CarouselCell.self) { cell in
-                if let data = viewModel?.viewState.financialServices?[indexPath.row] {
-                    cell.setListData(data: data)
-                }
+        switch indexPath.section {
+        case 0: 
+            return configureCarouselCell(for: collectionView, indexPath: indexPath)
+        case 1:
+            return configureListOrEmptyCell(for: collectionView, indexPath: indexPath)
+        default: return UICollectionViewCell()
+        }
+        
+    }
+    
+    // Separate method for configuring carousel cells
+    private func configureCarouselCell(for collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        return configureCell(for: collectionView, indexPath: indexPath, cellType: CarouselCell.self) { cell in
+            if let data = viewModel?.viewState.financialServices?[indexPath.row] {
+                cell.setListData(data: data)
             }
-        } else if  indexPath.section == 1 {
+        }
+    }
+
+    // Separate method for configuring list or empty state cells
+    private func configureListOrEmptyCell(for collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+        if let filteredData = viewModel?.viewState.filteredServiceDetailList, !filteredData.isEmpty {
             return configureCell(for: collectionView, indexPath: indexPath, cellType: CarouselListCell.self) { cell in
                 if let data = viewModel?.viewState.serviceDetailList?[indexPath.row] {
                     cell.setCarouselListData(data: data)
                 }
             }
         } else {
-            return UICollectionViewCell()
+            return configureCell(for: collectionView, indexPath: indexPath, cellType: EmptyViewCell.self) { _ in
+                // Empty cell setup if needed
+            }
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {

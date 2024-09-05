@@ -37,6 +37,7 @@ class CarouselListViewController: UIViewController {
         
         clvCarouselList.registerReusableCell(CarouselCell.self)
         clvCarouselList.registerReusableCell(CarouselListCell.self)
+        clvCarouselList.registerReusableCell(EmptyViewCell.self)
     }
     
     @IBAction func actionFloatingButton(_ sender: Any) {
