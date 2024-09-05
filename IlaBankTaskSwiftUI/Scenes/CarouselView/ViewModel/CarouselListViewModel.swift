@@ -10,7 +10,7 @@ import SwiftUI
 protocol CarouselListDelegate: AnyObject {
     func fetchFinancialServices()
     func fetchServicesList(currentIndex: Int)
-    func seachServices(searchText: String, currentIndex: Int)
+    func seachServices(searchText: String)
     func reloadServices()
 }
 
@@ -47,14 +47,14 @@ class CarouselListViewModel: CarouselListDelegate, ObservableObject {
         viewState.serviceDetailList = viewState.financialServices?[currentIndex].listData
     }
     
-    func seachServices(searchText: String, currentIndex: Int) {
+    func seachServices(searchText: String) {
         guard let financialServices = viewState.financialServices else {
             viewState.serviceDetailList = nil
             return
         }
         
         // Get the list of service details for the current index
-        if let listData = financialServices[currentIndex].listData {
+        if let listData = financialServices[viewState.currentIndex].listData {
             // Filter the list based on the search text
             viewState.serviceDetailList = searchText.isEmpty ? listData : listData.filter { service in
                 service.title?.localizedCaseInsensitiveContains(searchText) ?? false
@@ -67,9 +67,7 @@ class CarouselListViewModel: CarouselListDelegate, ObservableObject {
     
     func reloadServices() {
         viewState.searchText = ""
-        fetchFinancialServices()
         fetchServicesList(currentIndex: viewState.currentIndex)
-        seachServices(searchText: viewState.searchText, currentIndex: viewState.currentIndex)
     }
 }
 

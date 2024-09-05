@@ -82,19 +82,20 @@ private struct CarouselListMainView: View {
             } header: {
                 SearchBar(searchText: $viewModel.viewState.searchText)
                     .listRowInsets(EdgeInsets())
-                    .onChange(of: viewModel.viewState.searchText) { oldValue, newValue in
-                        print("OLD: ", oldValue, "NEW:", newValue)
-                        viewModel.seachServices(searchText: newValue, currentIndex: viewModel.viewState.currentIndex)
-                    }
+                    
             }.listRowSeparator(.hidden)
         }
-        .listStyle(.plain)
+        .listStyle(.plain).dismissKeyboardOnTap()
         .onAppear() {
+            viewModel.fetchFinancialServices()
             viewModel.reloadServices()
         }
-        .onChange(of: viewModel.viewState.currentIndex, { oldValue, newValue in
+        .onChange(of: viewModel.viewState.searchText) { oldValue, newValue in
+            viewModel.seachServices(searchText: newValue)
+        }
+        .onChange(of: viewModel.viewState.currentIndex) { oldValue, newValue in
             viewModel.reloadServices()
-        })
+        }
     }
 }
 

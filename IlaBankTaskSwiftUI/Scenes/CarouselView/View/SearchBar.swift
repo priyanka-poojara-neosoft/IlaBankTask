@@ -9,13 +9,16 @@ import SwiftUI
 
 struct SearchBar: View {
     @Binding var searchText: String
+    @FocusState private var isSearchBarFocused: Bool
     
     var body: some View {
         HStack {
             TextField("Search", text: $searchText)
                 .padding(7)
+                .focused($isSearchBarFocused) // External focus management
                 .padding(.horizontal, 25)
                 .background(Color(.systemGray6))
+                .autocorrectionDisabled(true)
                 .cornerRadius(8)
                 .overlay(
                     HStack {
@@ -36,6 +39,11 @@ struct SearchBar: View {
                     }
                 )
                 .padding(.horizontal, 10)
+                .onChange(of: searchText) { oldValue, newValue in
+                    DispatchQueue.main.async {
+                        isSearchBarFocused = searchText.isEmpty ? false : true
+                    }
+                }
         }
     }
 }

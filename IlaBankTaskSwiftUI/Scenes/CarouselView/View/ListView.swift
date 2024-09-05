@@ -23,6 +23,9 @@ struct ListViewForCurrentIndex: View {
             
         } else {
             Text("No service details available")
+                .multilineTextAlignment(.center)
+                .frame(maxWidth: .infinity)
+                .frame(height: 100)
                 .padding()
         }
         

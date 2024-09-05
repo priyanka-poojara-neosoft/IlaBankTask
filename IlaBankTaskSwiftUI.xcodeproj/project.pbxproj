@@ -20,6 +20,7 @@
 		92C35C452C836E3600C69EDA /* JsonFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C35C442C836E3600C69EDA /* JsonFileLoader.swift */; };
 		92C35C472C83BE0600C69EDA /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C35C462C83BE0600C69EDA /* SearchBar.swift */; };
 		92C35C492C84599B00C69EDA /* BottomSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C35C482C84599B00C69EDA /* BottomSheetView.swift */; };
+		993C92112C89BA6700F13EDB /* KeyboardModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C92102C89BA6700F13EDB /* KeyboardModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		92C35C442C836E3600C69EDA /* JsonFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileLoader.swift; sourceTree = "<group>"; };
 		92C35C462C83BE0600C69EDA /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		92C35C482C84599B00C69EDA /* BottomSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetView.swift; sourceTree = "<group>"; };
+		993C92102C89BA6700F13EDB /* KeyboardModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				92C35C442C836E3600C69EDA /* JsonFileLoader.swift */,
+				993C92102C89BA6700F13EDB /* KeyboardModifier.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				92C35C372C835E4300C69EDA /* CarouselView.swift in Sources */,
 				92C35C3B2C835F4300C69EDA /* ListView.swift in Sources */,
 				92C35C472C83BE0600C69EDA /* SearchBar.swift in Sources */,
+				993C92112C89BA6700F13EDB /* KeyboardModifier.swift in Sources */,
 				92C35C392C835F3900C69EDA /* CarouselListView.swift in Sources */,
 				92C35C242C83580700C69EDA /* IlaBankTaskSwiftUIApp.swift in Sources */,
 				92C35C432C8362EE00C69EDA /* FinanceServiceModel.swift in Sources */,
