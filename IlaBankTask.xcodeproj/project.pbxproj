@@ -31,6 +31,7 @@
 		925DD0E72C858DFD00170858 /* JsonFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DD0E62C858DFD00170858 /* JsonFileLoader.swift */; };
 		925DD0E92C85931300170858 /* ImageLoadExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DD0E82C85931300170858 /* ImageLoadExtension.swift */; };
 		92C35C162C83514F00C69EDA /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C35C152C83514F00C69EDA /* CarouselViewModel.swift */; };
+		993C920D2C898C3300F13EDB /* TapGestureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C920C2C898C3300F13EDB /* TapGestureExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		925DD0E62C858DFD00170858 /* JsonFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileLoader.swift; sourceTree = "<group>"; };
 		925DD0E82C85931300170858 /* ImageLoadExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadExtension.swift; sourceTree = "<group>"; };
 		92C35C152C83514F00C69EDA /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		993C920C2C898C3300F13EDB /* TapGestureExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +186,7 @@
 				923288092C80E4A6002E1A30 /* UICollectionView+Extension.swift */,
 				925DD0E62C858DFD00170858 /* JsonFileLoader.swift */,
 				925DD0E82C85931300170858 /* ImageLoadExtension.swift */,
+				993C920C2C898C3300F13EDB /* TapGestureExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				993C920D2C898C3300F13EDB /* TapGestureExtension.swift in Sources */,
 				923288142C80E5B7002E1A30 /* CarouselList+DataSource.swift in Sources */,
 				923287FD2C80D9EF002E1A30 /* CarouselListViewController.swift in Sources */,
 				925DD0E92C85931300170858 /* ImageLoadExtension.swift in Sources */,

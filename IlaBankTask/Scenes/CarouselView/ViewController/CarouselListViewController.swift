@@ -22,6 +22,9 @@ class CarouselListViewController: UIViewController {
         viewModel?.fetchFinancialServices()
         viewModel?.reloadServices(currentIndex: 0)
         title = viewModel?.viewState.currentServiceTitle
+        view.addTapGesture {
+            self.view.endEditing(true)
+        }
     }
     
     private func registerCollection() {
