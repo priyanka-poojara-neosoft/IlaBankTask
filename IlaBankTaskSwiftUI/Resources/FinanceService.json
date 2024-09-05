@@ -1,0 +1,97 @@
+{
+  "financial_services": [
+    {
+      "type_image": "https://img.freepik.com/free-photo/saving-money-concept-preset-by-male-hand-putting-money-coin-stack-growing-business-arrange-coins-into-heaps-with-hands-content-about-money_1150-45709.jpg?t=st=1725122817~exp=1725126417~hmac=a933864a23cd6497ff90755aca70738e7655c2d37ee8a5e7b510a4a08f962dda&w=1480",
+      "type_title": "Savings & Investments",
+      "listData": [
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/914/914230.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Savings Account",
+          "subtitle": "Secure your future with our high-interest savings accounts that grow your wealth over time."
+        },
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/2721/2721122.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Fixed Deposit",
+          "subtitle": "Enjoy guaranteed returns with our flexible fixed deposit plans, tailored to your financial goals."
+        },
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/14811/14811062.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Mutual Funds",
+          "subtitle": "Diversify your investment portfolio with our expertly managed mutual funds."
+        },
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/2721/2721217.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Retirement Plan",
+          "subtitle": "Plan your retirement with confidence, choosing from our range of pension schemes and annuities."
+        },
+        {
+            "image": "https://cdn-icons-png.freepik.com/256/2798/2798464.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+            "title": "Health Savings Account",
+            "subtitle": "Save on medical expenses with our flexible health savings accounts that offer tax advantages."
+        },
+        {
+            "image": "https://cdn-icons-png.freepik.com/256/16504/16504285.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+            "title": "Education Savings Plan",
+            "subtitle": "Invest in your future with our education savings plans designed to help fund higher education."
+        },
+        {
+            "image": "https://cdn-icons-png.freepik.com/256/9565/9565412.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+            "title": "Gold Savings",
+            "subtitle": "Grow your wealth with gold savings plans that offer secure investment options in gold."
+        }
+      ]
+    },
+    {
+      "type_image": "https://img.freepik.com/free-photo/credit-written-scrabble-letters-bank-notes_23-2148525366.jpg?t=st=1725122696~exp=1725126296~hmac=14bd727a3c3dcc14aae327105d999478746ff2f6f4ee4e187f580399c5858274&w=1480",
+      "type_title": "Loans & Credit",
+      "listData": [
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/3529/3529150.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Home Loan",
+          "subtitle": "Fulfill your dream of owning a home with our affordable home loan options."
+        },
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/6404/6404902.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Personal Loan",
+          "subtitle": "Get instant approval on personal loans with minimal documentation and quick disbursal."
+        },
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/1087/1087080.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Credit Card",
+          "subtitle": "Choose from our wide range of credit cards that offer exclusive rewards and cashback."
+        },
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/15708/15708432.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Auto Loan",
+          "subtitle": "Drive your dream car home with our low-interest auto loans and easy EMIs."
+        }
+      ]
+    },
+    {
+      "type_image": "https://img.freepik.com/free-vector/health-insurance-concept-idea-security-protection-property-life-from-damage-healthcare-medical-service-isolated-flat-vector-illustration_613284-336.jpg?t=st=1725122773~exp=1725126373~hmac=ad6454a540fe91392a72c971cf8f54d8c35f551ca837a205bdcc35710eefe4e3&w=1380",
+      "type_title": "Insurance & Protection",
+      "listData": [
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/13562/13562219.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Health Insurance",
+          "subtitle": "Protect your family’s health with our comprehensive health insurance plans."
+        },
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/7059/7059680.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Life Insurance",
+          "subtitle": "Ensure your loved ones' financial security with our tailored life insurance policies."
+        },
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/2125/2125202.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Home Insurance",
+          "subtitle": "Safeguard your home against unforeseen events with our reliable home insurance plans."
+        },
+        {
+          "image": "https://cdn-icons-png.freepik.com/256/4272/4272872.png?ga=GA1.1.955653324.1724951161&semt=ais_hybrid",
+          "title": "Travel Insurance",
+          "subtitle": "Travel worry-free with our comprehensive travel insurance that covers medical and trip-related risks."
+        }
+      ]
+    }
+  ]
+}
