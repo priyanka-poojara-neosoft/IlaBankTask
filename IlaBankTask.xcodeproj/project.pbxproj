@@ -32,6 +32,7 @@
 		925DD0E92C85931300170858 /* ImageLoadExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DD0E82C85931300170858 /* ImageLoadExtension.swift */; };
 		92C35C162C83514F00C69EDA /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C35C152C83514F00C69EDA /* CarouselViewModel.swift */; };
 		993C920D2C898C3300F13EDB /* TapGestureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C920C2C898C3300F13EDB /* TapGestureExtension.swift */; };
+		993C920F2C8992BA00F13EDB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 993C920E2C8992BA00F13EDB /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		925DD0E82C85931300170858 /* ImageLoadExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadExtension.swift; sourceTree = "<group>"; };
 		92C35C152C83514F00C69EDA /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
 		993C920C2C898C3300F13EDB /* TapGestureExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureExtension.swift; sourceTree = "<group>"; };
+		993C920E2C8992BA00F13EDB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 		923287D52C80D562002E1A30 = {
 			isa = PBXGroup;
 			children = (
+				993C920E2C8992BA00F13EDB /* README.md */,
 				923287E02C80D562002E1A30 /* IlaBankTask */,
 				923287DF2C80D562002E1A30 /* Products */,
 			);
@@ -292,6 +295,7 @@
 				9218EC082C871A8A00FDB91E /* BottomSheetViewController.xib in Resources */,
 				923287EE2C80D567002E1A30 /* Base in Resources */,
 				923287E92C80D562002E1A30 /* Base in Resources */,
+				993C920F2C8992BA00F13EDB /* README.md in Resources */,
 				9232880F2C80E533002E1A30 /* CarouselCell.xib in Resources */,
 				9232881B2C811404002E1A30 /* CarouselListCell.xib in Resources */,
 			);

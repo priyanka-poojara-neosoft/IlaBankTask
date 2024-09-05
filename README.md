@@ -3,7 +3,7 @@ This repository contains the source code for a Financial Services app, implement
 
 ### 1.Main Branch: 
 Contains the implementation using UIKit and a single UICollectionView with a Compositional Layout.
-### 2.IlaBankTaskSwiftUI Branch: 
+### 2.IlaBankSwiftUI Branch: 
 Contains the implementation using SwiftUI, following a task given for an Ila Bank project.
 
 ## Branches Overview
