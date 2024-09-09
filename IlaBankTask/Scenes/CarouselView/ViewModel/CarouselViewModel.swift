@@ -8,6 +8,7 @@
 import UIKit
 
 protocol CarouselListDelegate: AnyObject {
+    var viewState: CarouselListViewState { get set }
     func fetchFinancialServices()
     func fetchServicesList(currentIndex: Int)
     func seachServices(searchText: String)
@@ -26,8 +27,11 @@ struct CarouselListViewState {
 }
 
 class CarouselViewModel: CarouselListDelegate {
+    var viewState: CarouselListViewState
     
-    var viewState = CarouselListViewState()
+    init(viewState: CarouselListViewState) {
+        self.viewState = viewState
+    }
     
     func fetchFinancialServices() {
         do {

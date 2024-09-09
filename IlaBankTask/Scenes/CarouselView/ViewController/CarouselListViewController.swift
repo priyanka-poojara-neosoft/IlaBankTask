@@ -13,15 +13,24 @@ class CarouselListViewController: UIViewController {
         
     @IBOutlet weak var clvCarouselList: UICollectionView!
     
-    var viewModel: CarouselViewModel? = CarouselViewModel()
+    var viewModel: CarouselListDelegate
     var isSupplementaryViewLoaded = false
-
+    
+    init(viewModel: CarouselListDelegate) {
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         registerCollection()
-        viewModel?.fetchFinancialServices()
-        viewModel?.reloadServices(currentIndex: 0)
-        title = viewModel?.viewState.currentServiceTitle
+        viewModel.fetchFinancialServices()
+        viewModel.reloadServices(currentIndex: 0)
+        title = viewModel.viewState.currentServiceTitle
         view.addTapGesture {
             self.view.endEditing(true)
         }
@@ -44,7 +53,7 @@ class CarouselListViewController: UIViewController {
         let vc = BottomSheetViewController()
         vc.modalTransitionStyle = .coverVertical
         vc.modalPresentationStyle = .pageSheet
-        if let services = viewModel?.viewState.serviceDetailList {
+        if let services = viewModel.viewState.serviceDetailList {
             vc.financialServices = services
         }
         if let sheet = vc.sheetPresentationController {

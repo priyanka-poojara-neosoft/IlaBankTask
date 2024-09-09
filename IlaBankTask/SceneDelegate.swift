@@ -15,7 +15,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = scene as? UIWindowScene else { return }
         window = UIWindow(windowScene: windowScene)
-        let carouselVC = CarouselListViewController()
+        
+        let viewState = CarouselListViewState()
+        // Create the view model, injecting the loader
+        let viewModel = CarouselViewModel(viewState: viewState)
+        let carouselVC = CarouselListViewController(viewModel: viewModel)
         let navigationController = UINavigationController(rootViewController: carouselVC)
         self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()

@@ -90,9 +90,9 @@ extension CarouselListViewController: UICollectionViewDelegate {
 
         let currentIndexPath = lastVisibleItem.indexPath
         
-        if viewModel?.viewState.currentIndex != currentIndexPath.row && point.y <= 0 {
+        if viewModel.viewState.currentIndex != currentIndexPath.row && point.y <= 0 {
             // Update the page control in the footer view
-            if let financialServices = viewModel?.viewState.financialServices,
+            if let financialServices = viewModel.viewState.financialServices,
                let collectionView = self.clvCarouselList,
                let footerView = collectionView.supplementaryView(forElementKind: UICollectionView.elementKindSectionFooter, at: IndexPath(item: 0, section: 0)) as? PageControlView {
                 
@@ -100,8 +100,8 @@ extension CarouselListViewController: UICollectionViewDelegate {
                 footerView.pageControlViewDidUpdatePage(to: currentIndexPath.row, totalPageCount: totalPages)
                 
                 // Reload data only when the index changes
-                viewModel?.reloadServices(currentIndex: currentIndexPath.row)
-                title = viewModel?.viewState.currentServiceTitle
+                viewModel.reloadServices(currentIndex: currentIndexPath.row)
+                title = viewModel.viewState.currentServiceTitle
                 
                 DispatchQueue.main.async {
                     collectionView.reloadSections(IndexSet(integer: 1))
@@ -122,14 +122,14 @@ extension CarouselListViewController: SearchViewDelegate {
         let sectionIndex = 1 // Assuming list in first section in accordance to current data
 
         /// **Removing existing list and deleting all items from collection
-        let numberOfItemsBeforeUpdate = viewModel?.viewState.serviceDetailList?.count ?? 0
+        let numberOfItemsBeforeUpdate = viewModel.viewState.serviceDetailList?.count ?? 0
         let indexPathsToDelete = (0..<numberOfItemsBeforeUpdate).map { IndexPath(item: $0, section: sectionIndex) }
-        viewModel?.viewState.serviceDetailList = nil
+        viewModel.viewState.serviceDetailList = nil
         collectionView.deleteItems(at: indexPathsToDelete)
-        self.viewModel?.seachServices(searchText: searchText)
+        self.viewModel.seachServices(searchText: searchText)
         
         /// **Updating filtered search list and inserting new available data
-        let updatedItemCount = viewModel?.viewState.serviceDetailList?.count ?? 0
+        let updatedItemCount = viewModel.viewState.serviceDetailList?.count ?? 0
         let newIndexPaths = (0..<updatedItemCount).map { IndexPath(item: $0, section: sectionIndex) }
 
         DispatchQueue.main.async {
