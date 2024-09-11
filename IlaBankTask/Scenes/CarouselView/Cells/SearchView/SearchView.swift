@@ -26,9 +26,9 @@ class SearchView: UICollectionReusableView, Reusable {
         searchBar.text = ""
         searchBar.layer.borderWidth = 1
         searchBar.layer.borderColor = UIColor.white.cgColor
-        searchBar.showsCancelButton = true
-        searchBar.setShowsCancelButton(false, animated: true)
-        
+        searchBar.showsCancelButton = true // show cancel button
+        searchBar.searchTextField.rightView?.tintColor = .clear /// Hide dictation button
+        searchBar.searchTextField.rightView?.isUserInteractionEnabled = false /// Disable interaction for mike button
         return searchBar
     }()
     

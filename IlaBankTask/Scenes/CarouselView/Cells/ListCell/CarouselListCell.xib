@@ -21,24 +21,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="572" height="162"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="O3q-I8-gko">
-                                <rect key="frame" x="20" y="31" width="100" height="100"/>
+                                <rect key="frame" x="20" y="46" width="70" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="O3q-I8-gko" secondAttribute="height" multiplier="1:1" id="9eN-23-5bi"/>
-                                    <constraint firstAttribute="width" constant="100" id="dC8-dT-D1S"/>
+                                    <constraint firstAttribute="width" constant="70" id="dC8-dT-D1S"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="9Tv-IC-7fj">
-                                <rect key="frame" x="130" y="10" width="432" height="142"/>
+                                <rect key="frame" x="100" y="10" width="462" height="142"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="1000" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2A-bq-aGP">
-                                        <rect key="frame" x="0.0" y="0.0" width="432" height="20.333333333333332"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="462" height="20.333333333333332"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="999" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUQ-RK-miC">
-                                        <rect key="frame" x="0.0" y="25.333333333333336" width="432" height="116.66666666666666"/>
-                                        <mutableString key="text">private func createCarouselListSection() -&gt; NSCollectionLayoutSection {
+                                        <rect key="frame" x="0.0" y="25.333333333333336" width="462" height="116.66666666666666"/>
+                                        <string key="text">private func createCarouselListSection() -&gt; NSCollectionLayoutSection {
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1))
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         
@@ -51,7 +51,7 @@
         section.boundarySupplementaryItems = [createHeader()]
 
         return section
-    }</mutableString>
+    }</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -62,14 +62,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="O3q-I8-gko" firstAttribute="leading" secondItem="3Bd-r3-gdN" secondAttribute="leading" constant="20" id="Crp-ns-QJx"/>
-                            <constraint firstItem="O3q-I8-gko" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Bd-r3-gdN" secondAttribute="top" id="bnT-S2-CV9"/>
+                            <constraint firstItem="O3q-I8-gko" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Bd-r3-gdN" secondAttribute="top" constant="10" id="bnT-S2-CV9"/>
                             <constraint firstItem="9Tv-IC-7fj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="3Bd-r3-gdN" secondAttribute="top" constant="10" id="gv2-Nw-aOR"/>
                             <constraint firstAttribute="trailing" secondItem="9Tv-IC-7fj" secondAttribute="trailing" constant="10" id="jIm-yw-Fff"/>
                             <constraint firstItem="9Tv-IC-7fj" firstAttribute="centerY" secondItem="3Bd-r3-gdN" secondAttribute="centerY" id="kEb-23-gm5"/>
                             <constraint firstItem="O3q-I8-gko" firstAttribute="centerY" secondItem="3Bd-r3-gdN" secondAttribute="centerY" id="mWz-PV-pqe"/>
                             <constraint firstItem="9Tv-IC-7fj" firstAttribute="leading" secondItem="O3q-I8-gko" secondAttribute="trailing" constant="10" id="pPu-RC-1RI"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9Tv-IC-7fj" secondAttribute="bottom" constant="10" id="tQN-y3-OoQ"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="O3q-I8-gko" secondAttribute="bottom" id="tsc-ZA-ns0"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="O3q-I8-gko" secondAttribute="bottom" constant="10" id="tsc-ZA-ns0"/>
                         </constraints>
                     </view>
                 </subviews>
