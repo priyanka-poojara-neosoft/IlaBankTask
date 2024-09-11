@@ -40,11 +40,15 @@ extension BottomSheetViewController: BottomSheetDelegate {
         var frequencyDict = [Character: Int]()
         
         // Aggregate all titles listData titles
-        let allText = services.flatMap { service in
-            // Extract titles from each service
-            let titles = [service.title]
-            return  titles.compactMap { $0 }
-            
+//        let allText = services.flatMap { service in
+//            // Extract titles from each service
+//            let titles = [service.title]
+//            return  titles.compactMap { $0 }
+//            
+//        }
+        
+        let allText = services.compactMap { service in
+            return service.title
         }
         
         // Count character occurrences

@@ -31,6 +31,7 @@
 		925DD0E72C858DFD00170858 /* JsonFileLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DD0E62C858DFD00170858 /* JsonFileLoader.swift */; };
 		925DD0E92C85931300170858 /* ImageLoadExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925DD0E82C85931300170858 /* ImageLoadExtension.swift */; };
 		92C35C162C83514F00C69EDA /* CarouselViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C35C152C83514F00C69EDA /* CarouselViewModel.swift */; };
+		92F29B322C91627F003C3556 /* BottomSheetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F29B312C91627F003C3556 /* BottomSheetViewModel.swift */; };
 		993C920D2C898C3300F13EDB /* TapGestureExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C920C2C898C3300F13EDB /* TapGestureExtension.swift */; };
 		993C920F2C8992BA00F13EDB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 993C920E2C8992BA00F13EDB /* README.md */; };
 		993C92152C89BF8A00F13EDB /* EmptyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993C92132C89BF8A00F13EDB /* EmptyViewCell.swift */; };
@@ -64,6 +65,7 @@
 		925DD0E62C858DFD00170858 /* JsonFileLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonFileLoader.swift; sourceTree = "<group>"; };
 		925DD0E82C85931300170858 /* ImageLoadExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoadExtension.swift; sourceTree = "<group>"; };
 		92C35C152C83514F00C69EDA /* CarouselViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselViewModel.swift; sourceTree = "<group>"; };
+		92F29B312C91627F003C3556 /* BottomSheetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomSheetViewModel.swift; sourceTree = "<group>"; };
 		993C920C2C898C3300F13EDB /* TapGestureExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureExtension.swift; sourceTree = "<group>"; };
 		993C920E2C8992BA00F13EDB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		993C92132C89BF8A00F13EDB /* EmptyViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewCell.swift; sourceTree = "<group>"; };
@@ -84,8 +86,10 @@
 		9218EC042C8719EB00FDB91E /* BottomSheet */ = {
 			isa = PBXGroup;
 			children = (
-				9218EC052C871A8A00FDB91E /* BottomSheetViewController.swift */,
-				9218EC062C871A8A00FDB91E /* BottomSheetViewController.xib */,
+				92F29B302C916253003C3556 /* ViewModel */,
+				92F29B2F2C91624D003C3556 /* Model */,
+				92F29B2E2C91623E003C3556 /* ViewController */,
+				92F29B2D2C916237003C3556 /* View */,
 			);
 			path = BottomSheet;
 			sourceTree = "<group>";
@@ -236,6 +240,37 @@
 			path = SearchView;
 			sourceTree = "<group>";
 		};
+		92F29B2D2C916237003C3556 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9218EC062C871A8A00FDB91E /* BottomSheetViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		92F29B2E2C91623E003C3556 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9218EC052C871A8A00FDB91E /* BottomSheetViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		92F29B2F2C91624D003C3556 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		92F29B302C916253003C3556 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				92F29B312C91627F003C3556 /* BottomSheetViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		993C92122C89BF7500F13EDB /* EmptyCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92F29B322C91627F003C3556 /* BottomSheetViewModel.swift in Sources */,
 				993C920D2C898C3300F13EDB /* TapGestureExtension.swift in Sources */,
 				923288142C80E5B7002E1A30 /* CarouselList+DataSource.swift in Sources */,
 				923287FD2C80D9EF002E1A30 /* CarouselListViewController.swift in Sources */,
@@ -499,7 +535,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -527,7 +563,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

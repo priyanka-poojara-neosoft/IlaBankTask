@@ -39,8 +39,6 @@ class CarouselViewModel: CarouselListDelegate {
             
             viewState.financialServices = response.financialServices
             
-            print("RESPONSE RECEIVED SUCCESSFULLY")
-            
         } catch let error {
             
             print(error.localizedDescription)
