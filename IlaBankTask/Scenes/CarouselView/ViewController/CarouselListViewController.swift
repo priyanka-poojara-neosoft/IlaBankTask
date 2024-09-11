@@ -50,16 +50,25 @@ class CarouselListViewController: UIViewController {
     }
     
     @IBAction func actionFloatingButton(_ sender: Any) {
-        let vc = BottomSheetViewController()
-        vc.modalTransitionStyle = .coverVertical
-        vc.modalPresentationStyle = .pageSheet
-        if let services = viewModel.viewState.serviceDetailList {
-            vc.financialServices = services
-        }
-        if let sheet = vc.sheetPresentationController {
+        guard let services = viewModel.viewState.serviceDetailList else { return }
+       
+        let bottomSheetVC = createBottomSheetViewController(with: services)
+        configureSheetPresentation(for: bottomSheetVC)
+        self.navigationController?.present(bottomSheetVC, animated: true)
+    }
+    
+    private func createBottomSheetViewController(with services: [ServiceDetail]) -> BottomSheetViewController {
+        let bottomSheetViewModel = BottomSheetViewModel(financialServices: services)
+        let bottomSheetVC = BottomSheetViewController(viewModel: bottomSheetViewModel)
+        bottomSheetVC.modalTransitionStyle = .coverVertical
+        bottomSheetVC.modalPresentationStyle = .pageSheet
+        return bottomSheetVC
+    }
+
+    private func configureSheetPresentation(for viewController: BottomSheetViewController) {
+        if let sheet = viewController.sheetPresentationController {
             sheet.detents = [.medium()]
             sheet.prefersGrabberVisible = true
         }
-        self.navigationController?.present(vc, animated: true)
     }
 }
