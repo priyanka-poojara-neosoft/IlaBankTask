@@ -41,12 +41,13 @@ class CarouselListViewController: UIViewController {
         clvCarouselList.dataSource = self
         clvCarouselList.collectionViewLayout = createGroupLayout()
         
-        clvCarouselList.registerHeaderCell(SearchView.self)
-        clvCarouselList.registerFooterCell(PageControlView.self)
+        clvCarouselList.register(SearchView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: CellIdentifiers.search)
+        clvCarouselList.register(PageControlView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: CellIdentifiers.pageControl)
         
-        clvCarouselList.registerReusableCell(CarouselCell.self)
-        clvCarouselList.registerReusableCell(CarouselListCell.self)
-        clvCarouselList.registerReusableCell(EmptyViewCell.self)
+        clvCarouselList.register(UINib(nibName: CellIdentifiers.carousel, bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.carousel)
+        clvCarouselList.register(UINib(nibName: CellIdentifiers.carouselList, bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.carouselList)
+        clvCarouselList.register(UINib(nibName: CellIdentifiers.emptyView, bundle: nil), forCellWithReuseIdentifier: CellIdentifiers.emptyView)
+        
     }
     
     @IBAction func actionFloatingButton(_ sender: Any) {

@@ -32,7 +32,7 @@
             </constraints>
             <size key="customSize" width="270" height="205"/>
             <connections>
-                <outlet property="carouseImage" destination="6F8-3v-HUM" id="eE7-tx-5yP"/>
+                <outlet property="carouseImage" destination="6F8-3v-HUM" id="652-8F-MH2"/>
             </connections>
             <point key="canvasLocation" x="61.068702290076331" y="74.295774647887328"/>
         </collectionViewCell>

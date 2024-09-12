@@ -11,7 +11,7 @@ protocol SearchViewDelegate: AnyObject {
     func didUpdateSearchText(_ searchText: String, _ searchBar: UISearchBar)
 }
 
-class SearchView: UICollectionReusableView, Reusable {
+class SearchView: UICollectionReusableView {
     
     weak var delegate: SearchViewDelegate?
     

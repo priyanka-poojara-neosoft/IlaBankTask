@@ -9,12 +9,10 @@ import UIKit
 
 extension UIImageView {
     func loadImage(from url: URL, placeholder: UIImage? = nil) {
-        // Set placeholder image if provided
         self.image = placeholder
         
         // Create a data task to fetch the image data from the URL
         URLSession.shared.dataTask(with: url) { [weak self] data, response, error in
-            // Ensure there is data and no error
             guard let self = self, let data = data, error == nil else {
                 print("Failed to load image from url: \(error?.localizedDescription ?? "Unknown error")")
                 return
@@ -27,6 +25,6 @@ extension UIImageView {
                     self.image = image
                 }
             }
-        }.resume() // Start the data task
+        }.resume()
     }
 }

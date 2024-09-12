@@ -16,7 +16,6 @@
 		923287FD2C80D9EF002E1A30 /* CarouselListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923287FB2C80D9EF002E1A30 /* CarouselListViewController.swift */; };
 		923287FE2C80D9EF002E1A30 /* CarouselListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 923287FC2C80D9EF002E1A30 /* CarouselListViewController.xib */; };
 		923288072C80E3D9002E1A30 /* FinanceService.json in Resources */ = {isa = PBXBuildFile; fileRef = 923288062C80E3D0002E1A30 /* FinanceService.json */; };
-		9232880A2C80E4A6002E1A30 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923288092C80E4A6002E1A30 /* UICollectionView+Extension.swift */; };
 		9232880E2C80E533002E1A30 /* CarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9232880C2C80E533002E1A30 /* CarouselCell.swift */; };
 		9232880F2C80E533002E1A30 /* CarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9232880D2C80E533002E1A30 /* CarouselCell.xib */; };
 		923288122C80E5A7002E1A30 /* CarouselList+Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923288112C80E5A7002E1A30 /* CarouselList+Delegate.swift */; };
@@ -49,7 +48,6 @@
 		923287FB2C80D9EF002E1A30 /* CarouselListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselListViewController.swift; sourceTree = "<group>"; };
 		923287FC2C80D9EF002E1A30 /* CarouselListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselListViewController.xib; sourceTree = "<group>"; };
 		923288062C80E3D0002E1A30 /* FinanceService.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = FinanceService.json; sourceTree = "<group>"; };
-		923288092C80E4A6002E1A30 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		9232880C2C80E533002E1A30 /* CarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselCell.swift; sourceTree = "<group>"; };
 		9232880D2C80E533002E1A30 /* CarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselCell.xib; sourceTree = "<group>"; };
 		923288112C80E5A7002E1A30 /* CarouselList+Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CarouselList+Delegate.swift"; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 		923288082C80E48E002E1A30 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				923288092C80E4A6002E1A30 /* UICollectionView+Extension.swift */,
 				925DD0E62C858DFD00170858 /* JsonFileLoader.swift */,
 				925DD0E82C85931300170858 /* ImageLoadExtension.swift */,
 				993C920C2C898C3300F13EDB /* TapGestureExtension.swift */,
@@ -360,7 +357,6 @@
 				923287FD2C80D9EF002E1A30 /* CarouselListViewController.swift in Sources */,
 				925DD0E92C85931300170858 /* ImageLoadExtension.swift in Sources */,
 				92F29B352C91CD0F003C3556 /* StringConstant.swift in Sources */,
-				9232880A2C80E4A6002E1A30 /* UICollectionView+Extension.swift in Sources */,
 				923288282C81A26B002E1A30 /* SearchView.swift in Sources */,
 				925DD0E72C858DFD00170858 /* JsonFileLoader.swift in Sources */,
 				923288122C80E5A7002E1A30 /* CarouselList+Delegate.swift in Sources */,

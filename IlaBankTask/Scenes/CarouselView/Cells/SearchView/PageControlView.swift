@@ -11,7 +11,7 @@ protocol PageControlViewDelegate: AnyObject {
     func pageControlViewDidUpdatePage(to currentPage: Int, totalPageCount: Int)
 }
 
-class PageControlView: UICollectionReusableView, Reusable, PageControlViewDelegate {
+class PageControlView: UICollectionReusableView, PageControlViewDelegate {
     
     private let view: UIView = {
         let view = UIView()

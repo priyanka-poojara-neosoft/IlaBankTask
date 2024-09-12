@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CarouselCell: UICollectionViewCell, Reusable {
+class CarouselCell: UICollectionViewCell {
 
     @IBOutlet weak var carouseImage: UIImageView!
     

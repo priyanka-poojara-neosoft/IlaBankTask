@@ -21,3 +21,11 @@ struct StringConstant {
         """
     }
 }
+
+struct CellIdentifiers {
+    static let search = "SearchView"
+    static let pageControl = "PageControlView"
+    static let carousel = "CarouselCell"
+    static let carouselList = "CarouselListCell"
+    static let emptyView = "EmptyViewCell"
+}

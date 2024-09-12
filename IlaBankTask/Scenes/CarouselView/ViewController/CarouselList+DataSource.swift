@@ -36,47 +36,67 @@ extension CarouselListViewController: UICollectionViewDataSource {
     
     // Separate method for configuring carousel cells
     private func configureCarouselCell(for collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
-        return configureCell(for: collectionView, indexPath: indexPath, cellType: CarouselCell.self) { cell in
-            if let data = viewModel.viewState.financialServices?[indexPath.row] {
-                cell.setListData(data: data)
-            }
+        // Attempt to dequeue the cell
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.carousel, for: indexPath) as? CarouselCell else {
+            assertionFailure("Failed to dequeue CarouselCell")
+            return UICollectionViewCell()
         }
+        
+        // Safely unwrap the data for the current index path
+        guard let data = viewModel.viewState.financialServices?[indexPath.row] else {
+            assertionFailure("No data available for indexPath: \(indexPath.row)")
+            return cell // Return the cell anyway but without data
+        }
+        
+        // Configure the cell with the data
+        cell.setListData(data: data)
+        
+        return cell
     }
 
     // Separate method for configuring list or empty state cells
     private func configureListOrEmptyCell(for collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
         if let filteredData = viewModel.viewState.filteredServiceDetailList, !filteredData.isEmpty {
-            return configureCell(for: collectionView, indexPath: indexPath, cellType: CarouselListCell.self) { cell in
-                if let data = viewModel.viewState.serviceDetailList?[indexPath.row] {
-                    cell.setCarouselListData(data: data)
-                }
+            // Dequeue and configure CarouselListCell
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.carouselList, for: indexPath) as? CarouselListCell else {
+                return UICollectionViewCell()
             }
+            if let data = viewModel.viewState.serviceDetailList?[indexPath.row] {
+                cell.setCarouselListData(data: data)
+            }
+            return cell
         } else {
-            return configureCell(for: collectionView, indexPath: indexPath, cellType: EmptyViewCell.self) { _ in
-                // Empty cell setup if needed
+            // Dequeue and return EmptyViewCell when no data is available
+            guard let emptyCell = collectionView.dequeueReusableCell(withReuseIdentifier: CellIdentifiers.emptyView, for: indexPath) as? EmptyViewCell else {
+                return UICollectionViewCell()
             }
+            return emptyCell
         }
     }
+
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        // If the supplementary views have already been loaded, return an empty view to prevent reloading
-        
-        if (kind == UICollectionView.elementKindSectionHeader) {
-            let headerView = collectionView.dequeueReusableSupplementaryView(indexPath: indexPath, kind: kind) as SearchView
+
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CellIdentifiers.search, for: indexPath) as? SearchView else { fatalError("SearchView") }
+                
             print("Displaying header at \(indexPath.row)  \(indexPath.section)")
             headerView.delegate = self
             headerView.searchBar.text = ""
             return headerView
-        } else if (kind == UICollectionView.elementKindSectionFooter) {
-            let footerView = collectionView.dequeueReusableSupplementaryView(indexPath: indexPath, kind: kind) as PageControlView
+            
+        case UICollectionView.elementKindSectionFooter:
+            guard let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: CellIdentifiers.pageControl, for: indexPath) as? PageControlView else { fatalError("PageControlView") }
             
             let currentIndex = viewModel.viewState.currentIndex
             if let pagesCount = viewModel.viewState.financialServices?.count {
                 footerView.pageControlViewDidUpdatePage(to:  currentIndex, totalPageCount: pagesCount)
             }
             return footerView
-        } else {
-            return UICollectionReusableView()
+            
+        default:
+            return UICollectionViewCell()
         }
     }
     

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CarouselListCell: UICollectionViewCell, Reusable {
+class CarouselListCell: UICollectionViewCell {
 
     @IBOutlet weak var ivListItem: UIImageView!
     @IBOutlet weak var lblTitle: UILabel!

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class EmptyViewCell: UICollectionViewCell, Reusable {
+class EmptyViewCell: UICollectionViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
